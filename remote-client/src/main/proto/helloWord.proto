@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+//指定该proto文件编译成的java源文件的包名
+option java_package = "com.ncst.grpc.protobuf";
+// 表示下面的message编译成的java类文件的名字
+option java_outer_classname = "GrpcHelloProto";
+
+package Hello;
+
+// 使用的时候此类是所有使用的前缀
+service Hello {
+  rpc SayHello (HelloRequest) returns (HelloResponse) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloResponse {
+  string message = 1;
+}
