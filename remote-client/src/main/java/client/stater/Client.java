@@ -1,6 +1,5 @@
 package client.stater;
 
-
 import client.service.BaseService;
 import client.service.BaseServiceImpl;
 
